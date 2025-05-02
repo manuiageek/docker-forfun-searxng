@@ -8,6 +8,9 @@ Two environment variables are used:
 - `SEARXNG_SECRET` to secure the instance,
 - `BASE_URL` to configure the base URL accessible locally.
 
+To generate a new SEARXNG_SECRET, you can use this command : 
+openssl rand -hex 32
+
 These variables should be defined in a `.env` file located in the same directory as the `docker-compose.yml` file.
 
 The container is configured to always restart automatically using `restart: always`.
