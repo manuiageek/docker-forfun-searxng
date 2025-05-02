@@ -10,4 +10,9 @@ Two environment variables are used:
 
 These variables should be defined in a `.env` file located in the same directory as the `docker-compose.yml` file.
 
-The container is configured to always restart automatically using `restart: always`. Lastly, the service connects to an external Docker network named `searx_network` to enable communication with other containers if needed.
+The container is configured to always restart automatically using `restart: always`.
+
+**Important:** Before starting the container, you need to create the external Docker network `searx_network` used by the service:
+
+```bash
+docker network create searx_network
